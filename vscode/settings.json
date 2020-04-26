@@ -7,7 +7,6 @@
   "debug.showInStatusBar": "never",
   "debug.toolBarLocation": "docked",
   "diffEditor.ignoreTrimWhitespace": true,
-  "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
@@ -25,8 +24,6 @@
   "files.insertFinalNewline": true,
   "git.autofetch": true,
   "gitblame.statusBarMessageFormat": "${author.name} ( ${time.ago} )",
-  "gitlens.hovers.currentLine.enabled": false,
-  "gitlens.keymap": "alternate",
   "javascript.format.enable": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.validate.enable": false,
@@ -41,17 +38,12 @@
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
   "window.zoomLevel": 0,
-  "workbench.activityBar.visible": false, // hide left icons
   "workbench.editor.showTabs": true,
-  "workbench.iconTheme": "vscode-icons",
   "workbench.sideBar.location": "left",
   "zenMode.fullScreen": false,
   "zenMode.hideActivityBar": false,
   "zenMode.hideLineNumbers": false,
   "zenMode.hideStatusBar": false,
-  "gitlens.currentLine.enabled": false,
-  "gitlens.hovers.currentLine.over": "line",
-  "gitlens.codeLens.enabled": false,
   "vsicons.dontShowNewVersionMessage": true,
   "liveshare.featureSet": "insiders",
   "workbench.startupEditor": "newUntitledFile",
@@ -60,5 +52,6 @@
   },
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
-  }
+  },
+  "editor.fontFamily": "JetBrains Mono"
 }

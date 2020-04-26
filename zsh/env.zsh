@@ -4,9 +4,6 @@
 export EDITOR='nvim'
 export SUDO_EDITOR='nvim'
 
-# fnm
-eval "`fnm env --multi --use-on-cd`"
-
 export ANDROID_HOME=/Users/christophmenager/Library/Android/sdk
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 
