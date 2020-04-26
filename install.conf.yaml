@@ -1,0 +1,27 @@
+# Settings
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true # Swap the original file
+
+- clean: ["~"]
+
+- link:
+    # Zsh
+    ~/.zshrc: zsh/zshrc.zsh
+    # Karabiner
+    ~/.config/karabiner/karabiner.json: karabiner/karabiner.json
+    # Amethyst
+    ~/.amethyst: amethyst/.amethyst.json
+    # VS Code
+    ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
+    ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
+    ~/Library/Application Support/Code/User/snippets: vscode/snippets
+    # Git
+    ~/.gitconfig: git/gitconfig
+    # My Touch Bar My Rules
+    ~/Library/Application Support/MTMR/items.json: mtmr/items.json
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

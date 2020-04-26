@@ -1,0 +1,217 @@
+{
+  "React Native PureComponent": {
+    "prefix": "rn:purecomponent",
+    "body": [
+      "// @flow",
+      "import React, { PureComponent } from 'react';",
+      "import { ${3} } from 'react-native';",
+      "",
+      "type Props = {${1}};",
+      "",
+      "class ${TM_FILENAME/(\\w*)\\..+$/$1/} extends PureComponent<Props> {${4}",
+      "",
+      "  render() {",
+      "    return (",
+      "      ${2}",
+      "    );",
+      "  }",
+      "}",
+      "",
+      "export default ${TM_FILENAME/(\\w*)\\..+$/$1/};",
+      ""
+    ],
+    "description": "Pure component with props"
+  },
+  "React Native Component": {
+    "prefix": "rn:component",
+    "body": [
+      "// @flow",
+      "import React, { Component } from 'react';",
+      "import { ${5} } from 'react-native';",
+      "",
+      "type Props = {${3}};",
+      "type State = {${1}};",
+      "",
+      "class ${TM_FILENAME/(\\w*)\\..+$/$1/} extends Component<Props, State> {${6}",
+      "  state: State = {${2}};",
+      "",
+      "  render() {",
+      "    return (",
+      "      ${4}",
+      "    );",
+      "  }",
+      "}",
+      "",
+      "export default ${TM_FILENAME/(\\w*)\\..+$/$1/};",
+      ""
+    ],
+    "description": "Component with props and state"
+  },
+  "React Native FunctionComponent": {
+    "prefix": "rn:functioncomponent",
+    "body": [
+      "// @flow",
+      "import React from 'react';",
+      "import { ${3} } from 'react-native';",
+      "",
+      "type Props = {$1};",
+      "",
+      "function ${TM_FILENAME/(\\w*)\\..+$/$1/}(props: Props) {${4}",
+      "  return (",
+      "    ${2}",
+      "  );",
+      "}",
+      "",
+      "export default ${TM_FILENAME/(\\w*)\\..+$/$1/};",
+      ""
+    ],
+    "description": "Function component with props"
+  },
+  "Export default statement": {
+    "prefix": "export default",
+    "body": [
+      "export { ${2:default} } from './${TM_DIRECTORY/.*\\/(\\w*)$/$1/}${1}';",
+      "${3}"
+    ],
+    "description": "Export default statement"
+  },
+  "GraphQL container": {
+    "prefix": "hoc:graphql",
+    "body": [
+      "import { graphql } from 'react-apollo';",
+      "",
+      "import ${TM_DIRECTORY/.*\\/(\\w*)$/$1/}${2} from './${TM_DIRECTORY/.*\\/(\\w*)$/$1/}${1}.gql';",
+      "import ${TM_DIRECTORY/.*\\/(\\w*)$/$1/} from './${TM_DIRECTORY/.*\\/(\\w*)$/$1/}.component';",
+      "",
+      "export default graphql(${TM_DIRECTORY/.*\\/(\\w*)$/$1/}${2}, {",
+      "  props: ({ data: { ${3}, loading, error } }) => ({",
+      "    loading,",
+      "    error,",
+      "    ${4}${3},",
+      "  }),",
+      "})(${TM_DIRECTORY/.*\\/(\\w*)$/$1/});",
+      ""
+    ],
+    "description": "Create a GraphQL container"
+  },
+  "Test describe bootstrap": {
+    "prefix": "descc",
+    "body": [
+      "describe('${1}', () => {",
+      "  ${2}",
+      "})",
+      ""
+    ],
+    "description": "Bootstrap describe x it jest test"
+  },
+  "Test it bootstrap": {
+    "prefix": "itt",
+    "body": [
+      "it('${1}', () => {",
+      "  ${2}",
+      "})",
+      ""
+    ],
+    "description": "Bootstrap describe x it jest test"
+  },
+  "Import": {
+    "prefix": "imp",
+    "body": [
+      "import ${2} from '${1}';",
+      ""
+    ],
+    "description": "Import statement"
+  },
+  "Import destructured": {
+    "prefix": "impp",
+    "body": [
+      "import {${2}} from '${1}';",
+      ""
+    ],
+    "description": "Destructured import statement"
+  },
+  "Jest flag": {
+    "prefix": "flow",
+    "description": "Add the @flow flag",
+    "body": [
+      "// @flow"
+    ]
+  },
+  "Redux: Action": {
+    "prefix": "redux:action",
+    "description": "Create a redux action",
+    "body": [
+      "type ${2}Action = {",
+      "  type: '${5}',",
+      "  payload: ${6}${7}",
+      "}",
+      "",
+      "export const ${1}ActionCreator = (${3}: ${4}): ${2}Action => ({",
+      "  type: '${5}',",
+      "  payload: ${6}",
+      "});",
+      ""
+    ]
+  },
+  "Redux: Reducer": {
+    "prefix": "redux:reducer",
+    "description": "Create a redux reducer",
+    "body": [
+      "const initialState: ${2}State = {",
+      "  ${3}",
+      "};",
+      "",
+      "export const ${1}Reducer = (",
+      "  state: ${2}State = initialState,",
+      "  action: Action",
+      "): ${2}State => {",
+      "  switch (action.type) {",
+      "    ${4}",
+      "    default:",
+      "      return state;",
+      "  }",
+      "}",
+      ""
+    ]
+  },
+  "Create test for component": {
+    "prefix": "rn:test",
+    "body": [
+      "import React from 'react';",
+      "import renderer from 'react-test-renderer';",
+      "import ${TM_FILENAME/(\\w*)\\.js/$1/} from '${TM_FILENAME/(\\w*)\\.js/$1/}';",
+      "",
+      "describe('[${2}] ${TM_FILENAME/(\\w*)\\.js/$1/}', () => {",
+      "  it('renders correctly', () => {",
+      "    const props = {${3}};",
+      "    const component = renderer.create(<${TM_FILENAME/(\\w*)\\.js/$1/} {...props} />);",
+      "    expect(component.toJSON()).toMatchSnapshot();",
+      "  });",
+      "});",
+      ""
+    ]
+  },
+  "Ada: test snapshoht": {
+    "prefix": "ada:snap",
+    "body": [
+      "// @flow",
+      "",
+      "import React from 'react';",
+      "import Enzyme from 'enzyme';",
+      "import ${TM_FILENAME/(\\w*)\\.test.js/$1/} from '../${TM_FILENAME/(\\w*)\\.test.js/$1/}';",
+      "",
+      "describe('${TM_FILENAME/(\\w*)\\.test.js/$1/}', () => {",
+      "  it('renders correctly', () => {",
+      "    const props = {$1};",
+      "    const component = Enzyme.shallow(",
+      "      <${TM_FILENAME/(\\w*)\\.test.js/$1/}",
+      "        {...props}",
+      "      />",
+      "    );",
+      "    expect(component).toMatchSnapshot();",
+      "  });",
+      "});",
+      ""
+    ]
+  }
+}

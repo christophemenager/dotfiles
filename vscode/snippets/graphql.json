@@ -1,0 +1,17 @@
+{
+  "Query/Mutation": {
+    "prefix": "gql",
+    "body": [
+      "${1|query,mutation|} ${TM_FILENAME/(\\w*)\\..+$/$1/}(${2}) {",
+      "  ${4}",
+      "}",
+      ""
+    ],
+    "description": "new query or mutation"
+  },
+  "Import": {
+    "prefix": "import",
+    "body": ["#import \"${1}\"", "${2}"],
+    "description": "imports a fragment"
+  }
+}
