@@ -4,12 +4,14 @@
 [alias]
 	a = add -p -A
 	co = checkout
+	cob = checkout -b
 	br = branch
 	ci = "commit -m"
 	st = status
 	s = status -s
 	ca = commit --amend --no-edit
 	pousse = push --no-verify --force
+	prb = pull --rebase origin
 	unstage = reset HEAD
 	wip = commit -m ':construction: WIP'
   bk = reset HEAD~1
