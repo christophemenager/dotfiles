@@ -2,9 +2,12 @@
   "explorer.confirmDragAndDrop": false,
   "editor.fontFamily": "JetBrains Mono",
   "files.autoSave": "afterDelay",
+  "editor.format": "first",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.zoomLevel": 0,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.importModuleSpecifier": "relative"
 }
