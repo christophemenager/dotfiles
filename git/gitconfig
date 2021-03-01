@@ -1,6 +1,6 @@
 [user]
 	name = Christophe Menager
-	email = christophem@bam.tech
+	email = christophe.menager@matera.eu
 [alias]
 	a = add -p -A
 	co = checkout
@@ -22,6 +22,8 @@
   	tree = log --graph --pretty=format:'%C(auto)%h - %s [%an] (%C(blue)%ar)%C(auto)%d'
   	bigtree = log --graph --decorate --pretty=format:'%C(auto)%d%n%h %s%+b%n(%G?) %an <%ae> (%C(blue)%ad%C(auto))%n'
   	hist = log --date=short --pretty=format:'%C(auto)%ad %h (%G?) %s [%an] %d'
+	pull = pull --autostash
+	rebase = rebase --autostash  
 [push]
 	default = current
 [filter "lfs"]

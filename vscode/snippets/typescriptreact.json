@@ -1,0 +1,19 @@
+{
+  "Custom hook": {
+    "prefix": "hk",
+    "body": ["export const use${TM_FILENAME/(.*)\\..+$/$1/} = () => {$1}"],
+    "description": "Creates a custom hook"
+  },
+
+  "New component": {
+    "prefix": "cp",
+    "body": [
+      "import React, {FunctionComponent} from \"react\"",
+      "",
+      "type ${TM_FILENAME/(.*)\\..+$/$1/}Props = {$1}",
+      "",
+      "export const ${TM_FILENAME/(.*)\\..+$/$1/}: FunctionComponent<${TM_FILENAME/(.*)\\..+$/$1/}Props> = ({$2}) => {$3}"
+    ],
+    "description": "Creates a new component"
+  }
+}

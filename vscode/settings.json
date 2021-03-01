@@ -1,7 +1,6 @@
 {
   "explorer.confirmDragAndDrop": false,
   "editor.fontFamily": "JetBrains Mono",
-  "files.autoSave": "afterDelay",
   "editor.format": "first",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -9,5 +8,10 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "git.confirmSync": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.preferences.importModuleSpecifier": "relative"
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "files.autoSave": "afterDelay",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "extensions.ignoreRecommendations": false,
 }
